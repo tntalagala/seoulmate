@@ -45,17 +45,20 @@ if (empty($_SESSION['cart'])) {
         $result = mysqli_query($conn, $sql);
         $product = mysqli_fetch_assoc($result);
 
-        if ($product) {
+       if ($product) {
 
-            $subtotal = $product['price'] * $quantity;
-            $total = $total + $subtotal;
+    $subtotal = $product['price'] * $quantity;
+    $total = $total + $subtotal;
 
-            echo "<h2>" . $product['album_name'] . "</h2>";
-            echo "<p>" . $product['artist_name'] . "</p>";
-            echo "<p>Quantity: " . $quantity . "</p>";
-            echo "<p>Price: LKR " . number_format($subtotal, 2) . "</p>";
-            echo "<hr>";
-        }
+    echo '<div class="cart-item">';
+
+    echo "<h2>" . $product['album_name'] . "</h2>";
+    echo "<p>" . $product['artist_name'] . "</p>";
+    echo "<p>Quantity: " . $quantity . "</p>";
+    echo "<p>Price: LKR " . number_format($subtotal, 2) . "</p>";
+
+    echo '</div>';
+}
     }
 
     echo "<h2>Total: LKR " . number_format($total, 2) . "</h2>";
