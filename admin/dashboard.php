@@ -30,9 +30,12 @@ $message_count = mysqli_fetch_assoc($message_result);
 
     <title>SEOULMATE Admin Dashboard</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
+<div class="admin-container">
 
     <h1>SEOULMATE Admin Dashboard</h1>
 
@@ -50,13 +53,19 @@ $message_count = mysqli_fetch_assoc($message_result);
 
     <h2>Admin Menu</h2>
 
-    <p><a href="products.php">Manage Products</a></p>
+<div class="admin-menu">
 
-    <p><a href="orders.php">View Orders</a></p>
+    <a href="products.php">Manage Products</a>
 
-    <p><a href="messages.php">View Messages</a></p>
+    <a href="orders.php">View Orders</a>
 
-    <p><a href="logout.php">Logout</a></p>
+    <a href="messages.php">View Messages</a>
+
+    <a href="logout.php">Logout</a>
+
+</div>
+
+</div>
 
 </body>
 
