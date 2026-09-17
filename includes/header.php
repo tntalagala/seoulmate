@@ -22,6 +22,7 @@
         <a href="shop.php">Shop</a>
         <a href="about.php">About Us</a>
         <a href="contact.php">Contact</a>
+        <a href="cart.php">Cart</a>
     </nav>
 
 </header>
