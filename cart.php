@@ -61,9 +61,13 @@ if (empty($_SESSION['cart'])) {
 }
     }
 
-    echo "<h2>Total: LKR " . number_format($total, 2) . "</h2>";
+    echo '<div class="cart-total">';
 
-    echo '<button>Proceed to Checkout</button>';
+echo "<h2>Total: LKR " . number_format($total, 2) . "</h2>";
+
+echo '<button>Proceed to Checkout</button>';
+
+echo '</div>';
 }
 
 ?>
