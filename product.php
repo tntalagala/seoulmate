@@ -45,7 +45,9 @@ include "includes/header.php";
 
         <p>Stock: <?php echo $product['stock_quantity']; ?></p>
 
-        <button>Add to Cart</button>
+        <a href="cart.php?id=<?php echo $product['id']; ?>">
+    Add to Cart
+</a>
 
     </div>
 
