@@ -34,7 +34,7 @@ $message_count = mysqli_fetch_assoc($message_result);
 
 </head>
 
-<body>
+<body class="admin-page">
 <div class="admin-container">
 
     <h1>SEOULMATE Admin Dashboard</h1>

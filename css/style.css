@@ -462,3 +462,27 @@ nav a:hover {
     background-repeat: no-repeat;
     color: white;
 }
+
+
+
+.admin-page {
+    background-image: url("../images/admin-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+.admin-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.82);
+    z-index: -1;
+}
+
+
