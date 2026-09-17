@@ -1,7 +1,9 @@
-<?php
+<?php include "includes/header.php"; ?>
 
-include "includes/db.php";
+<section>
+    <h1>Welcome to SEOULMATE</h1>
 
-echo "SEOULMATE database connected";
+    <p>Your favorite K-pop albums, from Korea to you in Sri Lanka.</p>
+</section>
 
-?>
+<?php include "includes/footer.php"; ?>
