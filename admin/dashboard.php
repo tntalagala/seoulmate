@@ -7,6 +7,20 @@ if (!isset($_SESSION['admin_id'])) {
     exit();
 }
 
+include "../includes/db.php";
+
+$product_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM products");
+$product_count = mysqli_fetch_assoc($product_result);
+
+$user_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM users");
+$user_count = mysqli_fetch_assoc($user_result);
+
+$order_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM orders");
+$order_count = mysqli_fetch_assoc($order_result);
+
+$message_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM contact_messages");
+$message_count = mysqli_fetch_assoc($message_result);
+
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +37,16 @@ if (!isset($_SESSION['admin_id'])) {
     <h1>SEOULMATE Admin Dashboard</h1>
 
     <p>Welcome, <?php echo $_SESSION['admin_name']; ?>!</p>
+
+    <h2>Dashboard Overview</h2>
+
+    <p>Total Products: <?php echo $product_count['total']; ?></p>
+
+    <p>Total Users: <?php echo $user_count['total']; ?></p>
+
+    <p>Total Orders: <?php echo $order_count['total']; ?></p>
+
+    <p>Total Messages: <?php echo $message_count['total']; ?></p>
 
     <h2>Admin Menu</h2>
 
