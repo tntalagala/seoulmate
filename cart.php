@@ -9,8 +9,8 @@ if (!isset($_SESSION['cart'])) {
 }
 
 if (isset($_GET['id'])) {
-
-    $id = $_GET['id'];
+    
+$id = (int) $_GET['id'];
 
     if (isset($_SESSION['cart'][$id])) {
         $_SESSION['cart'][$id]++;

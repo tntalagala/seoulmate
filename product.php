@@ -6,7 +6,7 @@ if (!isset($_GET['id'])) {
     die("Product not found.");
 }
 
-$id = $_GET['id'];
+$id = (int) $_GET['id'];
 
 $sql = "SELECT products.*, artists.name AS artist_name
         FROM products

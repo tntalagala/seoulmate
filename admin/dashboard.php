@@ -43,13 +43,29 @@ $message_count = mysqli_fetch_assoc($message_result);
 
     <h2>Dashboard Overview</h2>
 
-    <p>Total Products: <?php echo $product_count['total']; ?></p>
+    <div class="dashboard-cards">
 
-    <p>Total Users: <?php echo $user_count['total']; ?></p>
+    <div class="dashboard-card">
+        <h3>Total Products</h3>
+        <p><?php echo $product_count['total']; ?></p>
+    </div>
 
-    <p>Total Orders: <?php echo $order_count['total']; ?></p>
+    <div class="dashboard-card">
+        <h3>Total Users</h3>
+        <p><?php echo $user_count['total']; ?></p>
+    </div>
 
-    <p>Total Messages: <?php echo $message_count['total']; ?></p>
+    <div class="dashboard-card">
+        <h3>Total Orders</h3>
+        <p><?php echo $order_count['total']; ?></p>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Total Messages</h3>
+        <p><?php echo $message_count['total']; ?></p>
+    </div>
+
+</div>
 
     <h2>Admin Menu</h2>
 

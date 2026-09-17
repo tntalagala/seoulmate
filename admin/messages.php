@@ -23,6 +23,8 @@ $result = mysqli_query($conn, $sql);
 
     <title>Customer Messages</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -33,7 +35,7 @@ $result = mysqli_query($conn, $sql);
         <a href="dashboard.php">Dashboard</a>
     </p>
 
-    <table border="1" cellpadding="10">
+    <table class="admin-table">
 
         <tr>
             <th>ID</th>

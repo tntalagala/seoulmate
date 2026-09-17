@@ -1,6 +1,6 @@
 <?php include "includes/header.php"; ?>
 
-<section>
+<section class="about-section">
     <h1>About SEOULMATE</h1>
 
     <p>

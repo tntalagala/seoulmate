@@ -24,6 +24,8 @@ $result = mysqli_query($conn, $sql);
 
     <title>Manage Products</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -31,14 +33,12 @@ $result = mysqli_query($conn, $sql);
     <h1>Manage Products</h1>
 
     <p>
-        <a href="dashboard.php">Dashboard</a>
-    </p>
+    <a class="admin-link" href="dashboard.php">Dashboard</a>
+</p>
 
-    <p>
-        <a href="add_product.php">Add New Product</a>
-    </p>
+<a class="admin-add" href="add_product.php">Add New Product</a>
 
-    <table border="1" cellpadding="10">
+<table class="admin-table">
 
         <tr>
             <th>ID</th>
@@ -64,15 +64,15 @@ $result = mysqli_query($conn, $sql);
             <td><?php echo $product['stock_quantity']; ?></td>
 
             <td>
-                <a href="edit_product.php?id=<?php echo $product['id']; ?>">
-                    Edit
-                </a>
+               <a class="admin-link" href="edit_product.php?id=<?php echo $product['id']; ?>">
+    Edit
+</a>
 
                 |
 
-                <a href="delete_product.php?id=<?php echo $product['id']; ?>">
-                    Delete
-                </a>
+                <a class="admin-link" href="delete_product.php?id=<?php echo $product['id']; ?>">
+    Delete
+</a>
             </td>
 
         </tr>

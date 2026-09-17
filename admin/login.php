@@ -42,11 +42,15 @@ if (isset($_POST['login'])) {
 
     <title>SEOULMATE Admin Login</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
 
-    <h1>SEOULMATE Admin Login</h1>
+    <div class="admin-login">
+
+        <h1>SEOULMATE Admin Login</h1>
 
     <?php if (isset($error)) { ?>
 
@@ -54,7 +58,7 @@ if (isset($_POST['login'])) {
 
     <?php } ?>
 
-    <form method="POST">
+    <form method="POST" class="admin-login">
 
         <label>Email</label>
         <input type="email" name="email" required>
@@ -68,7 +72,9 @@ if (isset($_POST['login'])) {
 
         <button type="submit" name="login">Login</button>
 
-    </form>
+       </form>
+
+    </div>
 
 </body>
 

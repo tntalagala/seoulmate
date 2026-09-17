@@ -13,7 +13,7 @@ if (!isset($_GET['id'])) {
     die("Product not found.");
 }
 
-$id = $_GET['id'];
+$id = (int) $_GET['id'];
 
 if (isset($_POST['update_product'])) {
 
@@ -56,7 +56,10 @@ if (!$product) {
 
     <title>Edit Product</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 
 <body>
 
@@ -66,7 +69,7 @@ if (!$product) {
         <a href="products.php">Back to Products</a>
     </p>
 
-    <form method="POST">
+    <form method="POST" class="admin-form">
 
         <label>Album Name</label>
         <input

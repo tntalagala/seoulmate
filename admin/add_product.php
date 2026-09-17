@@ -47,6 +47,8 @@ $categories = mysqli_query($conn, "SELECT * FROM categories");
 
     <title>Add Product</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body>
@@ -57,7 +59,7 @@ $categories = mysqli_query($conn, "SELECT * FROM categories");
         <a href="products.php">Back to Products</a>
     </p>
 
-    <form method="POST">
+   <form method="POST" class="admin-form">
 
         <label>Artist</label>
         <select name="artist_id" required>

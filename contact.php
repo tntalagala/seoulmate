@@ -31,7 +31,7 @@ include "includes/header.php";
         <p><?php echo $success; ?></p>
     <?php } ?>
 
-    <form method="POST">
+   <form method="POST" class="contact-form">
 
         <label>Name</label>
         <input type="text" name="name" required>

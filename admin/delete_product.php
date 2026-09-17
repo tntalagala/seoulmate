@@ -13,7 +13,7 @@ if (!isset($_GET['id'])) {
     die("Product not found.");
 }
 
-$id = $_GET['id'];
+$id = (int) $_GET['id'];
 
 $sql = "DELETE FROM products WHERE id = $id";
 
